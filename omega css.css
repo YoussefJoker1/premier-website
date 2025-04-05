@@ -1,0 +1,203 @@
+
+@media (max-width: 1023px) {
+    header {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .heroImg {
+      width: 400px;
+    }
+    .name,
+    .title {
+      font-size: 2rem;
+    }
+    .arrow {
+      display: none;
+    }
+    .aboutMe {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2rem;
+    }
+    .textContainer {
+      align-items: center;
+      margin: 0rem 5rem;
+      gap: 1rem;
+    }
+    .aboutName,
+    .aboutTitle {
+      font-size: 2rem;
+    }
+    .light {
+      width: 60px;
+    }
+    .aboutMeImg {
+      width: 400px;
+    }
+    .works {
+      padding: 0;
+    }
+    .worksContainer {
+      padding: 5rem 0rem;
+      gap: 3rem;
+    }
+    .projectTitle {
+      margin-left: 1rem;
+    }
+    .works ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contactContainer {
+      margin: 10rem 5rem;
+      gap: 2rem;
+    }
+    .contact {
+      flex-direction: column;
+      gap: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  
+body{
+    /*background-color:#C0C0C0;*/
+   /* background: linear-gradient(135deg, #002147, #002147);*/
+   background-color: #f0f0f0;
+}
+
+
+
+
+
+.sousinfo2{
+    margin-top: 20px;
+    margin-left:420px;
+    font-size: 20px;
+    width: 600px;
+    height: 200px;
+    color: rgb(255, 255, 255);
+    border-radius: 600px 600px 600px 600px;
+    
+    
+    box-shadow: 0 8px 16px rgba(0.5, 0.5, 0.5, 0.5);
+    background-color: #2f2f2f;
+    
+    
+
+}
+#rouh{
+    margin-left: 1200px;
+    height: 30px;
+    width: 400px;
+    margin-top: 0px;
+    margin-right: 30px;
+    background-color: gold ;
+    border-radius:  30px; 
+    
+ }
+
+#mod1{
+    background-color: #87cefa;
+    color: blue;
+    border-radius:  30px; 
+    margin-top: 4px;
+    
+    
+}
+#mod2{
+    background-color: white;
+    color: black;
+    border-radius:  30px; 
+    margin-top: 4px;
+}
+#mod3{
+    background-color: black;
+    color: beige;
+    border-radius:  30px; 
+    margin-top: 4px;
+    margin-left: -1px;
+}
+
+#modee{
+    display:flex;
+    margin-bottom: 5px;
+    
+    
+   
+}
+
+
+
+
+
+
+#img1:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+#imdlogo{
+    gap: 10px;
+    text-align: center;
+}
+
+.back3{
+    margin-top: 30px;
+    margin-left: 20px;
+
+}
+
+.info3{
+    font-size:30px ;
+    
+    color: rgb(0, 0, 0);
+}
+
+.divbig3{
+    display: flex;
+    gap: 30px;
+    margin-left: 80px;
+    
+    
+}
+
+.information{
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.pay{
+    text-align: center;
+    background-color: blue;
+    font-size: 30px;
+    width:100px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+
+#paya{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+    font-family: 'Playfair Display', serif;
+}
+
+.divpay{
+    text-align: center;
+}

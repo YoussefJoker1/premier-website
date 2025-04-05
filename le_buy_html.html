@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>BUY</title>
+<style>
+@media (max-width: 1023px) {
+  header {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .heroImg {
+    width: 400px;
+  }
+  .name,
+  .title {
+    font-size: 2rem;
+  }
+  .arrow {
+    display: none;
+  }
+  .aboutMe {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .textContainer {
+    align-items: center;
+    margin: 0rem 5rem;
+    gap: 1rem;
+  }
+  .aboutName,
+  .aboutTitle {
+    font-size: 2rem;
+  }
+  .light {
+    width: 60px;
+  }
+  .aboutMeImg {
+    width: 400px;
+  }
+  .works {
+    padding: 0;
+  }
+  .worksContainer {
+    padding: 5rem 0rem;
+    gap: 3rem;
+  }
+  .projectTitle {
+    margin-left: 1rem;
+  }
+  .works ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contactContainer {
+    margin: 10rem 5rem;
+    gap: 2rem;
+  }
+  .contact {
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+  }
+}
+
+
+   body {
+    background-image: url("C:/Users/user/Downloads/daniyar-orazov-Vj-4y8llETM-unsplash.jpg");
+      background-size: cover; /* غطي العنصر بالصورة بالكامل */
+      background-repeat: no-repeat; /* لا تكرر الصورة */
+      background-position: center;
+    }
+
+    .nameinfo{
+        /*color: rgb(160, 252, 160);*/
+        font-size: 20px;
+        font-weight: 1000;
+        color: goldenrod;
+       
+    }
+
+    .info{
+        border-radius: 50px ;
+        width: 240px;
+        font-size: 15px;
+    }
+
+    .div1{
+       /* background-image: url("C:/Users/user/Downloads/daniyar-orazov-Vj-4y8llETM-unsplash.jpg"); */
+     /* background-size: cover; /* اجعل الصورة تغطي العنصر */
+     /* background-repeat: no-repeat; /* منع تكرار الصورة */
+    /*  background-position: center; */
+
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        text-align: center;
+        margin-top: 120px;
+        margin-left: 590px;
+        width: 350px;
+        height: 500px;
+    }
+
+    button{
+        color: white;
+        width: 50px;
+        height: 30px;
+        margin-top: 30px;
+      /*  background-color: rgb(120, 165, 42);*/
+      background-color: goldenrod;
+        border-radius: 30px;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+
+    .zoom-image {
+            width: 100px; /* حجم الصورة الافتراضي */
+            height: auto;
+            transition: transform 0.6s ease-in-out; /* تأثير سلس */
+            cursor: pointer;
+        }
+
+        .zoom-image:hover {
+            transform: scale(5); /* تكبير تدريجي */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(5);
+            z-index: 9999;
+        }
+    
+</style>
+
+
+</head>
+<body>
+   <!-- <video autoplay muted loop>
+        <source src="C:\Users\user\Downloads\3457696767-preview.mp4">
+        Your browser does not support the video tag.
+      </video>  -->
+      
+      
+
+    <div class="div1"><br>
+        
+        <p class="nameinfo">ENTER YOUR NAME</p> 
+        <input id="info1" class="info" type="email" value="" placeholder="YYYY"><div id="div1"  style="color: red; background-color: white;width: 340px; font-size: 20px;"></div>
+
+        <p class="nameinfo">ENTER YOUR EMAIL</p> 
+        <input id="info2" class="info" type="email" value=""  placeholder="YYYY@gmail.com"><div id="div2" style="color: red; background-color: white; width: 340px;font-size: 20px;"></div>
+
+        <p class="nameinfo">PASWORD</p> 
+        <input id="info3" class="info" type="email" value=""  placeholder="" ><div id="div3" style="color: red; background-color: white;width: 340px; font-size: 20px;"></div>
+
+        <p class="nameinfo">ENTER YOUR PHONE</p> 
+        <input id="info4" class="info" type="password" value=""  placeholder="77-111 999"><div id="div4" style="color: red; background-color: white;width: 340px; font-size: 20px;"></div>
+
+        <button ><a id="button1" > BUY</a></button>
+        <div id="error" style="color: red; background-color: white;width: 340px; font-size: 20px;"></div>
+    </div>
+<br><br>
+
+
+
+    <script src="le_buy_js.js"></script>
+
+</body>
+</html>

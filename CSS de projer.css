@@ -1,0 +1,229 @@
+@media (max-width: 1023px) {
+    header {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .heroImg {
+      width: 400px;
+    }
+    .name,
+    .title {
+      font-size: 2rem;
+    }
+    .arrow {
+      display: none;
+    }
+    .aboutMe {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 2rem;
+    }
+    .textContainer {
+      align-items: center;
+      margin: 0rem 5rem;
+      gap: 1rem;
+    }
+    .aboutName,
+    .aboutTitle {
+      font-size: 2rem;
+    }
+    .light {
+      width: 60px;
+    }
+    .aboutMeImg {
+      width: 400px;
+    }
+    .works {
+      padding: 0;
+    }
+    .worksContainer {
+      padding: 5rem 0rem;
+      gap: 3rem;
+    }
+    .projectTitle {
+      margin-left: 1rem;
+    }
+    .works ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contactContainer {
+      margin: 10rem 5rem;
+      gap: 2rem;
+    }
+    .contact {
+      flex-direction: column;
+      gap: 1rem;
+      margin-right: 0;
+    }
+  }
+
+body{
+    border:  20px solid ;
+    border-radius:20px 20px 20px 20px;
+    background-color: #f0f0f0;
+    
+   
+}
+ #rouh{
+    margin-left: 830px;
+    height: 40px;
+    width: 400px;
+ }
+ #brand{
+    height: 20px;
+    width: 250px;
+    border-radius:  30px; 
+    margin-left: 30px;
+ }
+#mod1{
+    background-color: #87cefa;
+    color: blue;
+    border-radius:  30px; 
+    
+}
+#mod2{
+    background-color: white;
+    color: black;
+    border-radius:  30px; 
+}
+#mod3{
+    background-color: black;
+    color: beige;
+    border-radius:  30px; 
+}
+
+#modee{
+    display:flex;
+    margin-bottom: -13px;
+    background-color: rgb(19, 33, 46) ;
+   
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+#nomber1de1ercas{
+    border:15px solid goldenrod ;
+    background-color: #2f2f2f;
+    
+    height:500px;
+   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.h111{
+    margin-left: 490px;
+    color: #ffd700;
+    width: 480px;
+    border-radius: 10px 10px 10px 10px;
+
+    text-shadow:2px 2px 4px rgba(0,0,0, 0.7);
+    }
+
+
+
+#aaa3onwan{
+   
+    border-radius:10px 10px 10px 10px rgb(113, 195, 150);
+    width: 400px;
+    margin-top: 0px;
+    margin-left: 550px;
+    text-align: center;
+    /*color: rgb(15, 214, 151);*/
+    color: #ffd700;
+
+    text-shadow:2px 2px 4px rgba(0,0,0, 0.7);
+}
+#img1{
+    margin-top: 10px;
+    
+}
+
+.doyouhave{
+    font-family:'Roboto',sans-serif;
+    height: 800px;
+    width: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+
+    text-shadow:2px 2px 4px rgba(0,0,0, 0.7);
+}
+
+#divimg1{
+    margin-left:110px;
+    display: flex;
+    gap: 40px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+#button1{
+    background-color: #005a2b;
+    border-radius: 20px 20px 20px 20px;
+    font-size:25px;
+    margin-left: 50px;
+    width:145px;
+
+    
+   
+}
+
+
+
+#nomber2de2cas{
+    display:flex;
+    gap:80px;
+    margin-top: 60px;
+    margin-left: 100px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ppp{
+    background-color: gray;
+    border-radius: 30px 30px 30px 30px ;
+    text-align:center;
+    width:950px;
+    margin-left:250px;
+}
+
+.gmail{
+    background-color:blue;
+    color: rgb(255, 247, 0);
+    border-radius: 40px 40px 40px 40px;
+   
+}
+
+
+.point{
+    color:#ffffff;
+    text-decoration: none;
+}
