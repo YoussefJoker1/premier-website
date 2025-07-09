@@ -1,421 +1,239 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUSSEF - SERSHE</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* الأساسيات */
-:root {
-  --primary-color: darkred;
-  --secondary-color: darkblue;
-  --text-color: white;
-  --instagram-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-/* التنسيق العام */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--primary-color);
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-/* الهيدر */
-h4.enter {
-  font-size: clamp(20px, 5vw, 28px);
-  margin: 0 0 20px 0;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  color: var(--text-color);
-  line-height: 1.4;
-}
-
-/* حقل البحث */
-.group {
-  position: relative;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 350px;
-}
-
-.search-icon {
-  height: 20px;
-  width: 20px;
-  padding: 4px;
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  fill: var(--secondary-color);
-}
-
-.input {
-  width: 100%;
-  height: 50px;
-  padding: 0 15px 0 40px;
-  border-radius: 25px;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-.input:focus {
-  outline: none;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
-
-/* زر الإنستجرام */
-.instagram-btn {
-  display: none;
-  margin: 25px auto 0;
-  background: var(--instagram-gradient);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-size: clamp(16px, 4vw, 18px);
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  width: 100%;
-  max-width: 250px;
-  text-align: center;
-}
-
-.instagram-btn i {
-  margin-right: 8px;
-}
-
-/* نص الترحيب */
-.welcome-text {
-  font-size: clamp(16px, 4vw, 20px);
-  margin: 20px 0;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  color: var(--text-color);
-  line-height: 1.5;
-  padding: 0 15px;
-}
-
-.show {
-  opacity: 1;
-}
-
-/* حاوية الصورة */
-#imageContainer {
-  margin: 20px 0;
-  text-align: center;
-  width: 100%;
-}
-
-.profile-image {
-  width: clamp(120px, 40vw, 200px);
-  height: clamp(120px, 40vw, 200px);
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: all 0.5s ease;
-  transform: scale(0);
-}
-
-.show-image {
-  transform: scale(1) rotate(360deg);
-}
-
-/* وسائط استجابة خاصة للأجهزة الصغيرة */
-@media (max-width: 480px) {
-  .group {
-    width: 90%;
-  }
-  
-  .input {
-    height: 45px;
-    font-size: 14px;
-  }
-  
-  .instagram-btn {
-    padding: 10px 20px;
-  }
-  
-  .profile-image {
-    border-width: 3px;
-  }
-}
-
-/* للأجهزة الكبيرة (أكثر من 1200px) */
-@media (min-width: 1200px) {
-  body {
-    padding: 40px;
-  }
-  
-  .group {
-    max-width: 400px;
-  }
-  
-  .profile-image {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-/* للتوجيه الأفقي في الهواتف */
-@media (max-width: 768px) and (orientation: landscape) {
-  body {
-    padding: 10px;
-    justify-content: flex-start;
-  }
-  
-  h4.enter {
-    margin: 10px 0;
-  }
-  
-  .profile-image {
-    width: 100px;
-    height: 100px;
-  }
-}
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: darkred;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: darkblue;
-            text-align: center;
-        }
-        
-        h4.enter {
-            font-size: 24px;
-            margin-bottom: 30px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-            color: white;
-        }
-        
-        /* Search Input Style - From Uiverse */
-        .group {
-            position: relative;
-            margin: 20px auto;
-            width: 300px;
-        }
-        
-        .search-icon {
-            height: 24px;
-            width: 24px;
-            padding: 4px;
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            transform: translateY(-50%);
-            fill: #764ba2;
-        }
-        
-        .input {
-            width: 100%;
-            height: 50px;
-            padding: 0 1rem 0 2.5rem;
-            border-radius: 25px;
-            border: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        .input:focus {
-            outline: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* Instagram Button Style - Inspired by Uiverse */
-        .instagram-btn {
-            display: none;
-            margin-top: 30px;
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            width: 250px;
-            text-align: center;
-        }
-        
-        .instagram-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        
-        .instagram-btn i {
-            margin-right: 10px;
-        }
-        
-        .welcome-text {
-            font-size: 20px;
-            margin-bottom: 20px;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            color: white;
-        }
-        
-        .show {
-            opacity: 1;
-        }
-        
-        /* Style for the profile image */
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            margin: 20px auto;
-            display: none;
-            transition: all 0.5s ease;
-            transform: scale(0);
-        }
-        
-        .show-image {
-            display: block;
-            transform: scale(1);
-        }
-        
-        #imageContainer {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+   
+    <title> LUXURY wathes / ساعات الثراء</title>
+    <link rel="stylesheet" href="CSS de projer.css" >
 </head>
 <body>
-    <h4 class="enter">ENTER YOUR NAME</h4>
-    
-    <!-- Search Input From Uiverse.io by LightAndy1 -->
-    <div class="group">
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
-          <g>
-            <path
-              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-            ></path>
-          </g>
-        </svg>
-      
-        <input
-          id="usernameInput"
-          class="input"
-          type="text"
-          placeholder="اكتب اسمك هنا..."
-          name="username"
-        />
+    <div id="modee"> 
+        
+        <input type="text" id="brand" placeholder="Enter the like Brand" value=""> <a id="ok"  href="" 
+        style="width: 70px; height: 25px; background-color: burlywood; border-radius: 20px ;text-decoration: none;
+        border: solid #8794fa 2px; text-align: center; color: gold;
+        ">OK</a><h4 id="faux" style="color: red; "></h4>
+            <div id="rouh">
+                <button id="mod1">Classic MOD</button> 
+                <button   id="mod2">Light MOD</button>
+                <button id="mod3">Dark MOD</button>
+            </div>
     </div>
-    
-    <p id="welcomeText" class="welcome-text"></p>
-    
-    <!-- Container for profile image -->
-    <div id="imageContainer"></div>
-    
-    <!-- Instagram Button will appear after entering name -->
-    <a id="instagramBtn" class="instagram-btn" target="_blank">
-        <i class="fab fa-instagram"></i>
-        <span id="instagramUsername"></span>
-    </a>
+        <div id="nomber1de1ercas">
+                            <h1 id="aaa3onwan">welcome to Opulent Hours</h1>
+                                <div id="divimg1"><p class="doyouhave"><br><br>
+                                    
+                                    <br>Are you looking for a watch<br> that reflects your unique personality?<br>  A watch that tells your own story? Discover our exclusive collection of watches designed to make you stand out from the crowd.</p>
+                                    
+                                        
+                                        <img id="img1" 
+                                        style="box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.9); border-radius: 30px;"
+                                        src="https://cdn.prod.website-files.com/636a16f770681aa10bfb0cbc/665833d38cb62d21a1bafb61_rolex-datejust-m278285rbr-0036_2301dh_001-links_m126331-0009_2001jva_001-landscape-p-1600.webp" alt="welcom to Opulent Hours" width="400px" height="300px" />
 
-    <!-- قبل زر الإنستجرام -->
-<div id="imageContainer"></div>
+                                        <p class="doyouhave"><br><br><br>Invest in a timeless piece of art.<br> from the finest materials, and <br> their design reflects attention to the<br> smallest details. Choose a watch that <br>reflects your refined taste and<br> appreciation for quality products.</p>
 
-<!-- Instagram Button will appear after entering name -->
-<a id="instagramBtn" class="instagram-btn" target="_blank">
-    <i class="fab fa-instagram"></i>
-    <span id="instagramUsername"></span>
-</a>
+                                </div>
+    </div>
+<div id="h11">
+    <h1 class="h111">WHAT BRAND DO YOU LIKE?</h1>
+</div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const usernameInput = document.getElementById('usernameInput');
-            const welcomeText = document.getElementById('welcomeText');
-            const instagramBtn = document.getElementById('instagramBtn');
-            const instagramUsername = document.getElementById('instagramUsername');
-            const imageContainer = document.getElementById('imageContainer');
-            
-            // كائن يحتوي على الأسماء، روابط الإنستجرام، وروابط الصور
-            const nameData = {
-                'haysam': {
-                    instagram: 'https://www.instagram.com/haysam_warwar1/',
-                    image: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Cristiano_Ronaldo_WC2022_-_01.jpg' // استبدل برابط الصورة الحقيقية
-                },
-                'osman': {
-                    instagram: 'https://www.instagram.com/osmanhakim2007/',
-                    image: 'https://example.com/path/to/osman-image.jpg' // استبدل برابط الصورة الحقيقية
-                },
-                'anwar': {
-                    instagram: 'https://www.instagram.com/anwarobeid11/',
-                    image: 'https://www.instagram.com/anwarobeid11/p/DBdQe32NEsz/' // استبدل برابط الصورة الحقيقية
-                }
-            };
-            
-            usernameInput.addEventListener('keyup', function(e) {
-                if (e.key === 'Enter') {
-                    const name = usernameInput.value.trim().toLowerCase();
-                    
-                    if (name) {
-                        // مسح المحتوى السابق
-                        imageContainer.innerHTML = '';
-                        welcomeText.classList.remove('show');
-                        instagramBtn.style.display = 'none';
+        <div id="nomber2de2cas" >
+                    <div class="soustext1">
                         
-                        if (nameData[name]) {
-                            const userData = nameData[name];
-                            
-                            // عرض رسالة الترحيب
-                            welcomeText.textContent = `مرحباً ${name}! هذا حساب الإنستجرام الخاص بك`;
-                            welcomeText.classList.add('show');
-                            
-                            // عرض زر الإنستجرام
-                            instagramUsername.textContent = `@${userData.instagram.split('/')[3]}`;
-                            instagramBtn.href = userData.instagram;
-                            instagramBtn.style.display = 'inline-block';
-                            
-                            // إنشاء وعرض الصورة
-                            const img = document.createElement('img');
-                            img.src = userData.image;
-                            img.alt = `${name} Profile`;
-                            img.className = 'profile-image';
-                            
-                            // إضافة الصورة إلى الصفحة
-                            imageContainer.appendChild(img);
-                            
-                            // تأثير ظهور الصورة
-                            setTimeout(() => {
-                                img.classList.add('show-image');
-                            }, 100);
-                            
-                        } else {
-                            welcomeText.textContent = `عذراً، الاسم ${name} غير موجود في قاعدة البيانات`;
-                            welcomeText.classList.add('show');
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+                           <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px; background-color: #ffffff;" 
+                                src="https://1000marcas.net/wp-content/uploads/2020/01/logo-Rolex.png" 
+                                alt="ROLEX" width="250px" height="250px" /> 
+                        
+                        <br>
+                        <button id="button1"><a class="point" href="2 eme page de projer htlm.html">ROLEX</a></button>
+
+
+                    </div>
+
+                    <div class="soustext1">
+                        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+                        src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Omega_Logo.svg" 
+                        alt="ROLEX" width="250px" height="250px" /> <br>
+                        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\omega html.html">OMEGA</a></button>
+
+
+                    </div>
+
+
+
+                    <div class="soustext1">
+                        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+                        src="https://1000marcas.net/wp-content/uploads/2020/11/Citizen-Logo.png" 
+                        alt="ROLEX" width="250px" height="250px" /> <br>
+                        <button id="button1" ><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">CITIZEN</a></button>
+
+
+                    </div>
+
+                    <div class="soustext1">
+                        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+                        src="https://1000marcas.net/wp-content/uploads/2021/05/Chopard-Logo.png" 
+                        alt="ROLEX" width="250px" height="250px" /> <br>
+                        <button id="button1" ><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">CHOPARD</a></button>
+
+
+                    </div>
+
+
+                    
+        </div>
+
+
+
+
+
+
+<div id="nomber2de2cas" >
+            <div class="soustext1">
+                <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+                src="https://1000marcas.net/wp-content/uploads/2021/05/Orient-Logo.png" 
+                alt="ROLEX" width="250px" height="250px" /> <br>
+                <button id="button1" ><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">ORIENT</a></button>
+
+
+            </div>
+
+            <div class="soustext1">
+                <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+                src="https://1000marcas.net/wp-content/uploads/2021/05/Nautica-Watches-Logo.png" 
+                alt="ROLEX" width="250px" height="250px" /> <br>
+                <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">NAUTICA</a></button>
+
+
+            </div>
+
+
+
+            <div class="soustext1">
+                <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+                src="https://1000marcas.net/wp-content/uploads/2021/05/Breguet-Logo.png" 
+                alt="ROLEX" width="250px" height="250px" /> <br>
+                <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">BREGUET</a></button>
+
+
+            </div>
+
+            <div class="soustext1">
+                <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+                src="https://1000marcas.net/wp-content/uploads/2021/05/Piaget-Logo.png" 
+                alt="ROLEX" width="250px" height="250px" /> <br>
+                <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">PIAGET</a></button>
+
+
+            </div>
+
+
+
+</div>
+
+
+
+<div id="nomber2de2cas" >
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+        src="https://1000marcas.net/wp-content/uploads/2021/05/Breitling-Logo-1-640x360.png" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1" ><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">BREITLING</a></button>
+
+
+    </div>
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+        src="https://1000marcas.net/wp-content/uploads/2020/02/Hublot-Logo-tumb.jpg" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">HUBLOT</a></button>
+
+
+    </div>
+
+
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+        src="https://1000marcas.net/wp-content/uploads/2020/03/Swatch-Logo-tumb.jpg" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">SWATCH</a></button>
+
+
+    </div>
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+        src="https://1000marcas.net/wp-content/uploads/2020/03/Tag-Heuer-Logo-tumb.jpg" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">TAG-HEUER</a></button>
+
+
+    </div>
+
+
+
+</div>
+
+
+<div id="nomber2de2cas" >
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+        src="https://1000marcas.net/wp-content/uploads/2020/03/Tissot-tumb.jpg" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1" ><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">TISSOT</a></button>
+
+
+    </div>
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;" 
+        src="https://1000marcas.net/wp-content/uploads/2021/05/Nautica-Watches-Logo.png" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">NAUTICA</a></button>
+
+
+    </div>
+
+
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+        src="https://1000marcas.net/wp-content/uploads/2021/05/Breguet-Logo.png" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">BREGUET</a></button>
+
+
+    </div>
+
+    <div class="soustext1">
+        <img class="img2" style="box-shadow: 0 4px 8px rgba(0.1, 0.1, 0.1, 0.5); border-radius: 30px;background-color: #ffffff;"
+        src="https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/c_lpad,w_iw,h_ih/c_lpad,ar_1:1,w_800,g_center/ProductsAssets/Web/298617-6002_01.png" 
+        alt="ROLEX" width="250px" height="250px" /> <br>
+        <button id="button1"><a class="point" href="C:\Users\user\Desktop\projer de i2201\2 eme page de projer htlm.html">PIAGET</a></button>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+<br><br>
+<div id="omala" >
+
+    <p class="ppp">في حال واجهتك أي استفسارات حول منتجاتنا أو عملية الشراء، لا تتردد في التواصل معنا عبر البريد الإلكتروني <a class="gmail" href="googl.com">  البريد الالكتروني</a>أو الهاتف <a class="gmail" href="googl.com">واتس اب</a>. فريقنا سيسعد بمساعدتك</p>
+    <p class="ppp">If you have any questions regarding our products or the purchasing process, please do not hesitate to contact us via email at <a class="gmail" href="google.com">youssef@gmail.com</a> <br>or by phone at <a class="gmail" href="google.com">76410849</a>. Our team will be happy to assist you.</p>
+
+
+
+</div>
+
+
+<script  src="projet_js_bigweb.js"></script>
 </body>
 </html>
